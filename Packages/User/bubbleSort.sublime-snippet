@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+void bubbleSort(int n, vector<int> &arr) {
+    for (int i = n - 1; i >= 0; i--) {
+        bool ok = false;
+        for (int j = 0; j <= i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                ok = true;
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+        if (!ok) break;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bubbleSort</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,20 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"index_files": true,
+	"font_size": 23,
+	"trim_automatic_white_space": false,
+	"theme": "Monokai Pro (Filter Octagon).sublime-theme",
+	"color_scheme": "Monokai Pro (Filter Octagon).sublime-color-scheme",
+	"caret_style": "phase",
+	"caret_extra_top": 1,
+	"caret_extra_bottom": 1,
+	"caret_extra_width": 1,
+	// Additional spacing at the top of each line, in pixels
+	"line_padding_top": 2,
+
+	// Additional spacing at the bottom of each line, in pixels
+	"line_padding_bottom": 2,
+}

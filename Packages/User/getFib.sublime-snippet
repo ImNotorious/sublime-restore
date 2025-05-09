@@ -1,0 +1,49 @@
+<snippet>
+	<content><![CDATA[
+const int N = 101;
+int ar[3], I[3][3], T[3][3];
+
+void mul(int A[3][3], int B[][3], int dim) {
+    int res[dim+1][dim+1];
+    for(int i=1; i<=dim; i++) {
+        for(int j=1; j<=dim; j++) {
+            res[i][j] = 0;
+            for(int k=1; k<=dim; k++) {
+                res[i][j] = (res[i][j] % MOD + ((A[i][k] % MOD) * (B[k][j] % MOD) % MOD)) % MOD;
+            }
+        }
+    }
+    for(int i=1; i<=dim; i++) {
+        for(int j=1; j<=dim; j++) {
+            A[i][j] = res[i][j];
+        }
+    }
+}
+
+int getFib(int n) {
+    if(n <= 2) return ar[n];
+    I[1][1] = I[2][2] = 1;
+    I[1][2] = I[2][1] = 0;
+    T[1][1] = 0;
+    T[1][2] = T[2][1] = T[2][2] = 1;
+    n--;
+    while(n) {
+        if(n%2) mul(I, T, 2), n--;
+        else mul(T, T, 2), n/=2;
+    }
+    int Fn = (ar[1] * I[1][1] + ar[2] * I[2][1]) % MOD;
+    return Fn;
+}
+
+void solve() {
+    int n;
+    cin >> ar[1] >> ar[2] >> n;
+    n++;
+    cout << getFib(n) << endl;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>getFib</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

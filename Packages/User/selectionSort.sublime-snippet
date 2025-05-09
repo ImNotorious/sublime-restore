@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+void selectionSort(int n, vector<int> &arr) {
+    for(int i=0; i<n-1; i++) {
+        int mn = i;
+        for(int j=i+1; j<n; j++) {
+            if(arr[j] < arr[mn]) {
+                mn = j;
+            }
+        }
+        swap(arr[mn], arr[i]);
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>selectionSort</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

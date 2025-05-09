@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+void insertionSort(int n, vector<int> &arr) {
+    for(int i=0; i<n; i++) {
+        int j = i;
+        while(j > 0 && arr[j-1] > arr[j]) {
+            swap(arr[j-1], arr[j]);
+            j--;
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>insertionSort</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

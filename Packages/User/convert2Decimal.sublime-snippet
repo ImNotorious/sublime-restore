@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+int convert2Decimal(string s) {
+    int len = s.size();
+    int p2 = 1, num = 0;
+    for(int i=len-1; i>=0; i--) {
+        if(s[i] == '1') num = num + p2;
+        p2 = p2 * 2;
+    }
+    return num;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>convert2Decimal</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
